@@ -61,4 +61,51 @@ Este proyecto implementa el clásico juego de Buscaminas en Java. El juego permi
     ./gradlew test
     ```
 
+
+## Actualización v 1.0.2
+
+La Actualización incluye pruebas unitarias implementadas con JUnit para asegurar la calidad y el correcto funcionamiento del juego. Las pruebas cubren diferentes aspectos del juego, como la lógica de marcar y revelar casillas, la obtención de coordenadas, y la verificación del estado del juego.
+
+### Ejecución de las Pruebas Unitarias
+
+Para ejecutar las pruebas unitarias, sigue estos pasos:
+
+1. **En tu IDE:**
+
+   - Localiza la clase `BuscaminasTestSuite.java`.
+   - Haz clic derecho en la clase y selecciona "Run" o "Ejecutar" (o la opción equivalente en tu IDE). Esto ejecutará todas las pruebas definidas en esa clase.
+   - Tu IDE mostrará los resultados de las pruebas, indicando qué pruebas pasaron, fallaron o fueron ignoradas. Presta atención a cualquier prueba que falle, ya que esto podría indicar un problema en tu código.
+
+3. **Desde la línea de comandos (Maven o Gradle):**
+
+   - **Con Maven:** Navega a la raíz de tu proyecto en la terminal y ejecuta el siguiente comando:
+     ```bash
+     mvn test
+     ```
+     Maven ejecutará todas las pruebas unitarias y mostrará los resultados en la consola. Busca un resumen al final de la ejecución que indique el número de pruebas, los fallos y los errores.
+
+   - **Con Gradle:** Navega a la raíz de tu proyecto en la terminal y ejecuta el siguiente comando:
+     ```bash
+     ./gradlew test
+     ```
+     Gradle también ejecutará las pruebas unitarias y mostrará los resultados en la consola. Similar a Maven, busca un resumen al final.
+
+### Descripción de las Pruebas
+
+Las pruebas unitarias en `BuscaminasTestSuite` incluyen:
+
+- **testMarcarCasilla:** Verifica que se pueda marcar y desmarcar una casilla correctamente.
+- **testObtenerCoordenadas:** Asegura que se obtengan coordenadas válidas e inválidas.
+- **testRevelarCasilla:** Comprueba que se pueda revelar una casilla y que no se pueda revelar una casilla ya descubierta.
+- **testInicializacionCasillas:** Verifica que todas las casillas se inicialicen correctamente.
+- **testColocarMinas:** Asegura que se coloquen el número correcto de minas en el tablero.
+- **testCalcularMinasAlrededor:** Verifica que se calculen correctamente las minas alrededor de una casilla.
+- **testJuegoGanado:** Comprueba que el juego se considere ganado cuando todas las casillas sin mina están descubiertas.
+
+### Consejos para las Pruebas Unitarias
+
+- **Escribe pruebas para todos los casos:** Asegúrate de cubrir todos los escenarios posibles en tus pruebas, incluyendo casos límite y situaciones excepcionales.
+- **Pruebas legibles:** Escribe nombres de pruebas descriptivos que indiquen claramente qué se está probando. Esto facilita la comprensión de los resultados de las pruebas y la depuración.
+- **Automatización:** Considera integrar la ejecución de las pruebas unitarias en tu proceso de construcción (por ejemplo, usando un servidor de integración continua) para detectar errores de forma temprana.
+
 **Por Christian Taipe**
