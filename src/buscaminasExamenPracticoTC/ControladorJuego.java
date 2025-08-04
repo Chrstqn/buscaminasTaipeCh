@@ -3,13 +3,13 @@ package buscaminasExamenPracticoTC;
 import java.util.Scanner;
 
 public class ControladorJuego {
-    private TableroBM tablero; // Asegúrate de que el nombre de la clase sea TableroBM
+    private TableroBM tablero; 
     private Jugador jugador;
     private VistaConsola vista;
     private Scanner scanner;
 
     public ControladorJuego(int filas, int columnas, int minas, String nombreJugador) {
-        this.tablero = new TableroBM(filas, columnas, minas); // Cambiado a TableroBM
+        this.tablero = new TableroBM(filas, columnas, minas); 
         this.setJugador(new Jugador(nombreJugador));
         this.vista = new VistaConsola();
         this.scanner = new Scanner(System.in);
