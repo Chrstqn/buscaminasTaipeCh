@@ -41,7 +41,7 @@ public class TableroBM implements Serializable {
         }
     }
 
-    private void calcularMinasAlrededor() {
+    void calcularMinasAlrededor() {
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
                 if (casillas[i][j].tieneMina()) {

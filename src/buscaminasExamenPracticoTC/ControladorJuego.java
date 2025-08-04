@@ -64,7 +64,7 @@ public class ControladorJuego {
         System.out.println(tablero.getCasilla(fila, columna).isMarcada() ? "Casilla marcada." : "Casilla desmarcada.");
     }
 
-    private int[] obtenerCoordenadas(String input) {
+    int[] obtenerCoordenadas(String input) {
         if (input.length() < 2) return null;
         int fila = input.charAt(0) - 'A';
         int columna;
@@ -79,7 +79,7 @@ public class ControladorJuego {
         return new int[]{fila, columna};
     }
 
-    private void revelarCasilla(int fila, int columna) throws CasillaYaDescubiertaException {
+    void revelarCasilla(int fila, int columna) throws CasillaYaDescubiertaException {
         if (tablero.getCasilla(fila, columna).isRevelada()) {
             throw new CasillaYaDescubiertaException("La casilla ya ha sido descubierta.");
         }
